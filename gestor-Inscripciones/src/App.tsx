@@ -1,14 +1,11 @@
 import './App.css'
+import LandingPage from './assets/components/landing/LandingComp'
 
 function App() {
  
 
   return (
-    <>
-      <a href="a">
-        Gestor de inscripciones
-      </a>
-    </>
+    <LandingPage/>
   )
 }
 
