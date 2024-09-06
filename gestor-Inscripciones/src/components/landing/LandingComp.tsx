@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import iconSocket from "../../images/iconixto/linear/icon.png";
+import iconSocket from "../../assets/images/iconixto/linear/icon.png";
 import HamburgerMenu  from "../menu/MenuHamburguer";
 import Footer from '../generals/Footer';
 
