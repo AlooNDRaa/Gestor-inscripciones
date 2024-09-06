@@ -1,41 +1,13 @@
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import iconSocket from "../../assets/images/iconixto/linear/icon.png";
-import HamburgerMenu  from "../menu/MenuHamburguer";
 import Footer from '../generals/Footer';
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
     const theme = useTheme();
+    const navigate = useNavigate();
+
     return (
         <>
-            <Box sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                borderBottom: "1px solid #E5E5E5",
-                padding: "0.3rem",
-                gap: "0.1rem",
-                marginInline: "0.5rem",
-            }}>
-                <Box sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "0.1rem",
-                }}>
-                <Typography sx={{
-                    fontSize: "1.5rem",
-                    fontWeight: "bold",
-                    color: theme.palette.text.secondary,
-                    fontFamily: "Montserrat",
-                }}>
-                    CLASSTER
-                </Typography>
-                <img src={iconSocket} alt="socket" style={{ width:"1.5rem" }}/> 
-                </Box>
-                <Box sx={{}}>
-                    <HamburgerMenu/>
-                </Box>
-            </Box>
             <Box sx={{ 
                 position: "relative", 
                 textAlign: "center", 
@@ -95,7 +67,7 @@ const LandingPage = () => {
                     }}
                 >
                     Empodera tu carrera con el respaldo de mentores expertos. 
-                    Conectamos egresados de las ONGs con líderes de la industria para impulsar proyectos que generan un impacto real en la sociedad. 
+                    Conectamos egresados de diferentes ONGs con líderes de la industria para impulsar proyectos que generan un impacto real en la sociedad. 
                     ¡Da el siguiente paso y fortalece tu misión con nuestro apoyo!
                 </Typography>
             </Box>
@@ -123,7 +95,8 @@ const LandingPage = () => {
                 marginTop: "1rem",
                 marginBottom: "4rem",
             }}>
-                <Button sx={{
+                <Button
+                 sx={{
               backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
                  borderRadius: "10px",
                     marginTop: "1rem",
@@ -133,7 +106,11 @@ const LandingPage = () => {
                     width: "10rem",
                     height: "4rem",
                     padding: "0.5rem",
-                }}>
+                }}
+                onClick={
+                   () => navigate("/selecUser")
+                }
+                >
                     <Typography sx={{
                         fontSize: "1rem",
                         color: theme.palette.primary.main,

@@ -15,6 +15,7 @@ export const Theme1: ThemeOptions = {
     },
     text: {
       primary: '#231F20', // Gris texto
+      secondary: '#252525', // Negro
     },
     error: {
       main: '#F35746', // Naranja
