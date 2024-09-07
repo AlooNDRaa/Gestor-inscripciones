@@ -29,13 +29,13 @@ const Footer = () => {
                     fontSize: "1.6rem",
                     marginTop: "0.9rem",
                 }}>
-                    <a href="http://">
+                    <a href="http://" target="_blank">
                     <FaLinkedin size={30}/>
                     </a>
-                    <a href="https://www.figma.com/design/Q8kgQVkfVRZXnB2xtAoUdj/PoloIT---New-desing?node-id=0-1&node-type=CANVAS&t=CUIpFKWOzaBCUjMw-0">
+                    <a href="https://www.figma.com/design/Q8kgQVkfVRZXnB2xtAoUdj/PoloIT---New-desing?node-id=0-1&node-type=CANVAS&t=CUIpFKWOzaBCUjMw-0" target="_blank">
                     <FaFigma size={30}/>
                     </a>
-                    <a href="http://">
+                    <a href="http://" target="_blank">
                     <FaGithub size={30}/>
                     </a>
                 </div>

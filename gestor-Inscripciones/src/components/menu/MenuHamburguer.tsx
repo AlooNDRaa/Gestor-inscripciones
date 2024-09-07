@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  { useNavigate }  from "react-router-dom";
 import {
   Box,
   List,
@@ -44,6 +45,7 @@ const MenuContainer = styled(Box)<{ open: boolean }>(({ open }) => ({
 const HamburgerMenu: React.FC = () => {
   const [open, setOpen] = useState(false);
   const theme = useTheme<Theme>();
+  const navigate = useNavigate();
 
   const handleBackdropClick = () => {
     setOpen(false);
@@ -88,7 +90,9 @@ const HamburgerMenu: React.FC = () => {
           />
         </Box>
 
-        <MenuContainer open={open}>
+        <MenuContainer onClick={() => {
+          setOpen(false);
+        }} open={open}>
           <List sx={{
             color: theme.palette.text.primary,
           }}>
@@ -100,7 +104,7 @@ const HamburgerMenu: React.FC = () => {
                 paddingLeft: "1rem",
               }}
               button
-              onClick={() => setOpen(false)}
+              onClick={() => navigate("/")}
             >
               <FiHome size={24} />
               <ListItemText

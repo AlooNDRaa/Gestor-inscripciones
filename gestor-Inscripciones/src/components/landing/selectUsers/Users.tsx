@@ -19,7 +19,7 @@ const SelectUsers = () => {
                 color: theme.palette.text.secondary,
                 fontFamily: "Roboto",
                 textAlign: "center",
-                minWidth: "25rem",
+                Width: "90%",
                 marginTop: "2rem",
             }}>
                 Ingrese en ClassTer como...
