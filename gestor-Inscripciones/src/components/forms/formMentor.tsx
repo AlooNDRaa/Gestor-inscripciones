@@ -1,0 +1,99 @@
+import React, { useState } from "react";
+import { Box, Button, TextField, Typography, useTheme  } from "@mui/material";
+
+const FormMentor: React.FC = () => {
+    const theme = useTheme();
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        //LOGICA CON LA CONEXION AL BACK END
+    };
+
+    return (
+        <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-around",
+                gap: "1.5rem",
+                width: "100%",
+              }}
+        >
+            <Typography
+                variant="h4"
+                sx={{
+                    fontWeight: "bold",
+                    marginBottom: "1rem",
+                    textAlign: "center",
+                }}
+            >
+                Iniciar como Mentor
+            </Typography>
+
+            <TextField
+                label="Email"
+                variant="outlined"
+                fullWidth
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+            />
+
+            <TextField
+                label="Contraseña"
+                type="password"
+                variant="outlined"
+                fullWidth
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                required
+            />
+
+<Button
+        sx={{
+          backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
+          borderRadius: "10px",
+          marginTop: "1rem",
+          marginBottom: "1rem",
+          marginLeft: "1rem",
+          marginRight: "1rem",
+          width: "10rem",
+          height: "4rem",
+          padding: "0.5rem",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "1rem",
+            color: theme.palette.primary.main,
+            fontFamily: "Roboto",
+            fontWeight: "bold",
+            textAlign: "center",
+            width: "20rem",
+          }}
+        >
+          Iniciar
+        </Typography>
+      </Button>
+        </Box>
+    );
+};
+
+export default FormMentor;
