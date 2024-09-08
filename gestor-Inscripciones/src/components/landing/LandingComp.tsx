@@ -136,7 +136,7 @@ const LandingPage = () => {
                         height: "4rem",
                         padding: "0.5rem",
                     }}
-                    onClick={() => navigate("/selecUser")}
+                    onClick={() => navigate("/usuario=?")}
                 >
                     <Typography sx={{
                         fontSize: "1rem",

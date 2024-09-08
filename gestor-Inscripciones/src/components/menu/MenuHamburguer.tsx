@@ -11,9 +11,10 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { FiHome } from "react-icons/fi";
-import { RiContactsLine } from "react-icons/ri";
+import { RiContactsLine, RiAdminLine } from "react-icons/ri";
 import { IoBookOutline } from "react-icons/io5";
 import { PiUsersFourLight } from "react-icons/pi";
+
 
 
 const Line = styled(Box)(() => ({
@@ -128,7 +129,7 @@ const HamburgerMenu: React.FC = () => {
                 paddingLeft: "1rem",
               }}
               button
-              onClick={() => setOpen(false)}
+              onClick={() => navigate("/contacto")}
             >
               <RiContactsLine size={24} />
               <ListItemText
@@ -178,9 +179,33 @@ const HamburgerMenu: React.FC = () => {
               button
               onClick={() => setOpen(false)}
             >
-              <PiUsersFourLight size={24} />
+              <PiUsersFourLight size={27} />
               <ListItemText
                 primary="Sobre Nosotros"
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    fontFamily: "Roboto",
+                    marginLeft: "1rem",
+                    color: theme.palette.text.primary,
+                  },
+                }}
+              />
+            </ListItem>
+            <ListItem
+              sx={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                paddingLeft: "1rem",
+              }}
+              button
+              onClick={() => setOpen(false)}
+            >
+              <RiAdminLine size={24} />
+              <ListItemText
+                primary="Iniciar Sesion"
                 primaryTypographyProps={{
                   sx: {
                     fontSize: "1.2rem",

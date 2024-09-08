@@ -46,7 +46,7 @@ const FloatingButton = () => {
                     padding: "0.5rem",
                     zIndex: 1000,
                 }}
-                onClick={() => navigate("/selecUser")}
+                onClick={() => navigate("/usuario=?")}
             >
                 <Typography sx={{
                     fontSize: "1rem",
