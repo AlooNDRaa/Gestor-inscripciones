@@ -104,7 +104,6 @@ const HamburgerMenu: React.FC = () => {
                 alignItems: "center",
                 paddingLeft: "1rem",
               }}
-              button
               onClick={() => navigate("/")}
             >
               <FiHome size={24} />
@@ -128,7 +127,6 @@ const HamburgerMenu: React.FC = () => {
                 alignItems: "center",
                 paddingLeft: "1rem",
               }}
-              button
               onClick={() => navigate("/contacto")}
             >
               <RiContactsLine size={24} />
@@ -152,7 +150,6 @@ const HamburgerMenu: React.FC = () => {
                 alignItems: "center",
                 paddingLeft: "1rem",
               }}
-              button
               onClick={() => setOpen(false)}
             >
               <IoBookOutline size={24} />
@@ -176,7 +173,6 @@ const HamburgerMenu: React.FC = () => {
                 alignItems: "center",
                 paddingLeft: "1rem",
               }}
-              button
               onClick={() => setOpen(false)}
             >
               <PiUsersFourLight size={27} />
@@ -200,7 +196,6 @@ const HamburgerMenu: React.FC = () => {
                 alignItems: "center",
                 paddingLeft: "1rem",
               }}
-              button
               onClick={() => setOpen(false)}
             >
               <RiAdminLine size={24} />
