@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const FormStudent: React.FC = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -19,6 +21,11 @@ const FormStudent: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     //LOGICA CON LA CONEXION AL BACK END
+    // Navigation momentanea, luego al implementar la autenticacion se cambia
+    console.log("Buendia");
+    navigate("/userBoard")
+    
+
   };
 
   return (
@@ -66,7 +73,7 @@ const FormStudent: React.FC = () => {
         required
       />
 
-      <Button
+      <Button type="submit"
         sx={{
           backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
           borderRadius: "10px",
