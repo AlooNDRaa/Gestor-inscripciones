@@ -103,6 +103,7 @@ const HamburgerMenu: React.FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 paddingLeft: "1rem",
+                cursor: "pointer",
               }}
               onClick={() => navigate("/")}
             >
@@ -126,6 +127,7 @@ const HamburgerMenu: React.FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 paddingLeft: "1rem",
+                cursor: "pointer",
               }}
               onClick={() => navigate("/contacto")}
             >
@@ -149,6 +151,7 @@ const HamburgerMenu: React.FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 paddingLeft: "1rem",
+                cursor: "pointer",
               }}
               onClick={() => setOpen(false)}
             >
@@ -172,6 +175,7 @@ const HamburgerMenu: React.FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 paddingLeft: "1rem",
+                cursor: "pointer",
               }}
               onClick={() => setOpen(false)}
             >
@@ -195,6 +199,7 @@ const HamburgerMenu: React.FC = () => {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 paddingLeft: "1rem",
+                cursor: "pointer",
               }}
               onClick={() => setOpen(false)}
             >
