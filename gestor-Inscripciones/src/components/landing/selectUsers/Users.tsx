@@ -150,12 +150,11 @@ const SelectUsers = () => {
                             sx={{
                                 position: "absolute",
                                 top: "10px",
-                                right: "10px",
-                                color: theme.palette.error.main,
-                                fontSize: "2rem",
+                                right: "5px",
+                                color: theme.palette.secondary.main,
                             }}
                         >
-                            <CloseIcon />
+                            <CloseIcon/>
                         </Button>
                         {modalType === "mentor" && <FormMentor />}
                         {modalType === "alumno" && <FormStudent />}

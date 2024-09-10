@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
+import { Box, Button, IconButton, InputAdornment, TextField, Typography, useTheme } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { BsEnvelope } from "react-icons/bs";
+import { TbLockAccessOff, TbEye, TbEyeOff } from "react-icons/tb"; 
+
 
 const FormStudent: React.FC = () => {
-  const theme = useTheme();
+  const Theme1 = useTheme();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  const [showPassword, setShowPassword] = useState(false); 
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -27,6 +33,16 @@ const FormStudent: React.FC = () => {
     
 
   };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword); 
+};
+
+  const handlePasswordKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === " ") {
+        e.preventDefault();
+    }
+};
 
   return (
     <Box
@@ -49,33 +65,97 @@ const FormStudent: React.FC = () => {
           textAlign: "center",
         }}
       >
-        Iniciar como Alumno
+        Iniciar como alumno
       </Typography>
 
       <TextField
-        label="Email"
-        variant="outlined"
-        fullWidth
-        name="email"
-        value={formData.email}
-        onChange={handleInputChange}
-        required
-      />
+                label={
+                    <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '1rem' }}>
+                        <BsEnvelope style={{ marginRight: 8 }} />
+                        Email
+                    </Box>
+                }
+                variant="outlined"
+                fullWidth
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+                sx={{
+                    "& .MuiOutlinedInput-root": {
+                        borderRadius: "1rem",
+                        "& fieldset": {
+                            borderColor: Theme1.palette.background.paper,
+                            borderWidth: "1px",
+                        },
+                        "&:hover fieldset": {
+                            borderColor: "black",
+                        },
+                    },
+                    "& .MuiInputLabel-root": {
+                        color: "black",
+                        fontSize: '1rem',
+                        "&.Mui-focused": {
+                            color: "black",
+                        },
+                    },
+                    "& .MuiFormLabel-asterisk": {
+                      display: "none",
+                  },
+                }}
+            />
 
-      <TextField
-        label="Contraseña"
-        type="password"
-        variant="outlined"
-        fullWidth
-        name="password"
-        value={formData.password}
-        onChange={handleInputChange}
-        required
-      />
+            <TextField
+                label={
+                    <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '1rem' }}>
+                        <TbLockAccessOff style={{ marginRight: 8 }} />
+                        Contraseña
+                    </Box>
+                }
+                type={showPassword ? "text" : "password"}
+                variant="outlined"
+                fullWidth
+                required
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                onKeyDown={handlePasswordKeyDown}
+                InputProps={{
+                    endAdornment: (
+                        <InputAdornment position="end">
+                            <IconButton onClick={togglePasswordVisibility} edge="end">
+                                {showPassword ? <TbEyeOff /> : <TbEye />}
+                            </IconButton>
+                        </InputAdornment>
+                    ),
+                }}
+                sx={{
+                  "& .MuiFormLabel-asterisk": {
+                        display: "none",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                        borderRadius: "1rem",
+                        "& fieldset": {
+                            borderColor: Theme1.palette.background.paper,
+                            borderWidth: "1px",
+                        },
+                        "&:hover fieldset": {
+                            borderColor: "black",
+                        },
+                    },
+                    "& .MuiInputLabel-root": {
+                        color: "black",
+                        fontSize: '1rem',
+                        "&.Mui-focused": {
+                            color: "black",
+                        },
+                    },
+                }}
+            />
 
       <Button type="submit"
         sx={{
-          backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
+          backgroundImage: `linear-gradient(to right, ${Theme1.palette.background.paper}, ${Theme1.palette.secondary.contrastText})`,
           borderRadius: "10px",
           width: "10rem",
           height: "4rem",
@@ -84,7 +164,7 @@ const FormStudent: React.FC = () => {
         <Typography
           sx={{
             fontSize: "1rem",
-            color: theme.palette.primary.main,
+            color: Theme1.palette.primary.main,
             fontFamily: "Roboto",
             fontWeight: "bold",
             textAlign: "center",
