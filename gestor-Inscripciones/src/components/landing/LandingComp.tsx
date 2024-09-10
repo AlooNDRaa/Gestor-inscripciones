@@ -1,19 +1,16 @@
-import { Box, Typography, useTheme, Button } from "@mui/material";
-import Footer from '../generals/Footer';
-import { useNavigate } from "react-router-dom";
+import { Box, Typography, useTheme  } from "@mui/material";
 import iconSocket from "../../assets/images/iconixto/linear/icon.png";
-import FloatingButton from "./buttons/Button";
+import StartButton from "./buttons/Button";
 
-const LandingPage = () => {
+const LandingMobileComp = () => {
     const theme = useTheme();
-    const navigate = useNavigate();
 
     return (
         <>
             <Box sx={{ 
                 position: "relative", 
                 textAlign: "center", 
-                mt: 1,
+                mt: 0.5,
                 width: "100%", 
                 height: "auto", 
                 maxWidth: "100%", 
@@ -47,34 +44,6 @@ const LandingPage = () => {
             </Box>
             <Box sx={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                marginTop: "2rem",
-                marginBottom: "2rem",
-                padding: "0 1rem",
-                gap: "1rem",
-            }}>
-                <Typography
-                    sx={{
-                        fontSize: "1.2rem",
-                        fontWeight: "medium",
-                        color: theme.palette.text.primary,
-                        fontFamily: "Roboto",
-                        textAlign: "center",
-                        marginTop: "0.1rem",
-                        marginBottom: "1rem",
-                        lineHeight: "1.5",
-                        maxWidth: "95%",
-                    }}
-                >
-                    Empodera tu carrera con el respaldo de mentores expertos. 
-                    Conectamos egresados de diferentes entidades con líderes de la industria para impulsar proyectos que generan un impacto real en la sociedad. 
-                    ¡Da el siguiente paso y fortalece tu misión con nuestro apoyo!
-                </Typography>
-            </Box>
-            <Box sx={{
-                display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 marginTop: "1rem",
@@ -85,9 +54,9 @@ const LandingPage = () => {
                     color: theme.palette.text.primary,
                     fontFamily: "Roboto",
                     textAlign: "center",
-                    width: "22.5rem",
+                    width: "20rem",
                 }}>
-                ¡Conecta con mentores expertos y crea proyectos que generen impacto!
+                ¡Impulsa tu carrera ahora y crece junto a nosotros!
                 </Typography>
             </Box>
             <Box sx={{
@@ -102,58 +71,9 @@ const LandingPage = () => {
                 <img src={iconSocket} alt="socket" style={{ width:"1.5rem" }}/> 
                 <img src={iconSocket} alt="socket" style={{ width:"1.5rem" }}/> 
             </Box>
-            <Box sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "1.5rem",
-                marginBottom: "5rem",
-            }}>
-                <Typography sx={{
-                    fontSize: "1.2rem",
-                    fontWeight: 800,
-                    color: theme.palette.text.primary,
-                    fontFamily: "Roboto",
-                    textAlign: "center",
-                    width: "20rem",
-                }}>
-                    ¡Impulsa tu carrera ahora y crece junto a nosotros!
-                    Ingresa ahora y descubre cómo puedes hacer una diferencia significativa en tu carrera y en el mundo.
-                </Typography>
-            </Box>
-             <Box sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "1rem",
-                marginBottom: "4rem",
-            }}>
-                <Button
-                    sx={{
-                        backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
-                        borderRadius: "10px",
-                        width: "10rem",
-                        height: "4rem",
-                        padding: "0.5rem",
-                    }}
-                    onClick={() => navigate("/usuario=?")}
-                >
-                    <Typography sx={{
-                        fontSize: "1rem",
-                        color: theme.palette.primary.main,
-                        fontFamily: "Roboto",
-                        fontWeight: "bold",
-                        textAlign: "center",
-                    }}>
-                        Iniciar
-                    </Typography>
-                </Button>
-            </Box>
-            
-            <FloatingButton />
-            <Footer />
+            <StartButton/>
         </>
     );
 };
 
-export default LandingPage;
+export default LandingMobileComp;

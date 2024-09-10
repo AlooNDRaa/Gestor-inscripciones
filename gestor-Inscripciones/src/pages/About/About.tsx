@@ -1,6 +1,6 @@
-const About = () => {
+const AboutUs = () => {
     return(
         <><h1>About</h1></>
     )
 }
-export default About;
+export default AboutUs;

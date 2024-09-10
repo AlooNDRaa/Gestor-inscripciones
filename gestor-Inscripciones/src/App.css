@@ -4,7 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  flex: 1;
+}
+
 a {
   text-decoration: none;
   color: #231F20;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
 }

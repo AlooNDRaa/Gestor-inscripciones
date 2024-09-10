@@ -4,7 +4,7 @@ import { TbLockAccessOff, TbEye, TbEyeOff } from "react-icons/tb";
 import { Box, Button, IconButton, InputAdornment, TextField, Typography, useTheme } from "@mui/material";
 
 const FormMentor: React.FC = () => {
-    const Theme1 = useTheme();
+    const theme = useTheme();
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -76,7 +76,7 @@ const FormMentor: React.FC = () => {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "1px",
                         },
                         "&:hover fieldset": {
@@ -124,7 +124,7 @@ const FormMentor: React.FC = () => {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "1px",
                         },
                         "&:hover fieldset": {
@@ -146,7 +146,7 @@ const FormMentor: React.FC = () => {
 
             <Button
                 sx={{
-                    backgroundImage: `linear-gradient(to right, ${Theme1.palette.background.paper}, ${Theme1.palette.secondary.contrastText})`,
+                    backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
                     borderRadius: "10px",
                     marginTop: "1rem",
                     marginBottom: "1rem",
@@ -160,7 +160,7 @@ const FormMentor: React.FC = () => {
                 <Typography
                     sx={{
                         fontSize: "1rem",
-                        color: Theme1.palette.primary.main,
+                        color: theme.palette.primary.main,
                         fontFamily: "Roboto",
                         fontWeight: "bold",
                         textAlign: "center",

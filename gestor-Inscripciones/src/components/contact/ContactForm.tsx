@@ -5,7 +5,7 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { LuMessageSquarePlus } from "react-icons/lu";
 
 export default function ContactForm() {
-    const Theme1 = useTheme();
+    const theme = useTheme();
     const [message, setMessage] = useState(""); 
 
     const handleMessageChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -39,7 +39,7 @@ export default function ContactForm() {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "2px",
                         },
                         "&:hover fieldset": {
@@ -70,7 +70,7 @@ export default function ContactForm() {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "2px",
                         },
                         "&:hover fieldset": {
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 fontSize: '0.8rem',
                 marginTop: "0.3rem",
                 marginBottom: "0.5rem",
-                color: Theme1.palette.text.secondary,
+                color: theme.palette.text.secondary,
             }}>
                 Con el siguiente formato +56999999999
             </Typography>
@@ -111,7 +111,7 @@ export default function ContactForm() {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "2px",
                         },
                         "&:hover fieldset": {
@@ -142,7 +142,7 @@ export default function ContactForm() {
                     fontSize: '0.8rem',
                     marginTop: "0.3rem",
                     marginBottom: "0.5rem",
-                    color: Theme1.palette.text.secondary,
+                    color: theme.palette.text.secondary,
                 }}>
                     Máximo 800 caracteres
                 </Typography>
@@ -150,7 +150,7 @@ export default function ContactForm() {
                     fontSize: '0.8rem',
                     marginTop: "0.3rem",
                     marginBottom: "0.5rem",
-                    color: Theme1.palette.text.secondary,
+                    color: theme.palette.text.secondary,
                 }}>
                     {characterCount}/{maxLength}
                 </Typography>
@@ -163,7 +163,7 @@ export default function ContactForm() {
                 width: "100%",
             }}>
                 <Button sx={{
-                    backgroundImage: `linear-gradient(to right, ${Theme1.palette.background.paper}, ${Theme1.palette.secondary.contrastText})`,
+                    backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
                     borderRadius: "10px",
                     minWidth: "80%",
                     height: "3.5rem",

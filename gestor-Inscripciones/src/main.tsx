@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { Theme1 } from '../src/assets/mui/theme/theme'; 
+import { theme } from '../src/assets/mui/theme/theme'; 
 
-const theme = createTheme(Theme1); 
+const theme1 = createTheme(theme); 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,8 +12,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline /> {/* Aplica estilos globales */}
+    <ThemeProvider theme={theme1}>
+      <CssBaseline /> 
       <App />
     </ThemeProvider>
   </React.StrictMode>

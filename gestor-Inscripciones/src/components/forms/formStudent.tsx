@@ -6,7 +6,7 @@ import { TbLockAccessOff, TbEye, TbEyeOff } from "react-icons/tb";
 
 
 const FormStudent: React.FC = () => {
-  const Theme1 = useTheme();
+  const theme = useTheme();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -85,7 +85,7 @@ const FormStudent: React.FC = () => {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "1px",
                         },
                         "&:hover fieldset": {
@@ -136,7 +136,7 @@ const FormStudent: React.FC = () => {
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
-                            borderColor: Theme1.palette.background.paper,
+                            borderColor: theme.palette.background.paper,
                             borderWidth: "1px",
                         },
                         "&:hover fieldset": {
@@ -155,7 +155,7 @@ const FormStudent: React.FC = () => {
 
       <Button type="submit"
         sx={{
-          backgroundImage: `linear-gradient(to right, ${Theme1.palette.background.paper}, ${Theme1.palette.secondary.contrastText})`,
+          backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
           borderRadius: "10px",
           width: "10rem",
           height: "4rem",
@@ -164,7 +164,7 @@ const FormStudent: React.FC = () => {
         <Typography
           sx={{
             fontSize: "1rem",
-            color: Theme1.palette.primary.main,
+            color: theme.palette.primary.main,
             fontFamily: "Roboto",
             fontWeight: "bold",
             textAlign: "center",

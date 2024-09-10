@@ -31,7 +31,6 @@ const SelectUsers = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            padding: "2.5rem",
         }}>
             <Typography sx={{
                 fontSize: "2.1rem",
@@ -39,10 +38,10 @@ const SelectUsers = () => {
                 color: theme.palette.text.secondary,
                 fontFamily: "Roboto",
                 textAlign: "center",
-                Width: "90%",
+                Width: "50%",
                 marginTop: "2rem",
             }}>
-                Ingrese en ClassTer como...
+                Ingrese  como...
             </Typography>
             <Box sx={{
                 display: "flex",
@@ -51,8 +50,7 @@ const SelectUsers = () => {
                 alignItems: "center",
                 padding: "2.5rem",
                 width: "100%",
-                marginTop: "6rem",
-                marginBottom: "2rem",
+                marginTop: "2.5rem",
                 gap: "2rem",
                 textAlign: "center",
             }}>
@@ -60,8 +58,8 @@ const SelectUsers = () => {
                     backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
                     borderRadius: "0.5rem",
                     marginBottom: "2rem",
-                    minWidth: "18rem",
-                    height: "6rem",
+                    minWidth: "16rem",
+                    height: "5.5rem",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -71,6 +69,7 @@ const SelectUsers = () => {
                     "&:hover": {
                         backgroundColor: theme.palette.secondary.contrastText,
                         color: theme.palette.primary.main,
+                        borderRadius: "10rem",
                     },
                 }} onClick={handleMentorClick} >
                     <Typography sx={{
@@ -91,8 +90,8 @@ const SelectUsers = () => {
                     borderRadius: "0.5rem",
                     marginTop: "2rem",
                     marginBottom: "2rem",
-                    minWidth: "18rem",
-                    height: "6rem",
+                    minWidth: "16rem",
+                    height: "5.5rem",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -102,6 +101,7 @@ const SelectUsers = () => {
                     "&:hover": {
                         backgroundColor: theme.palette.secondary.contrastText,
                         color: theme.palette.primary.main,
+                        borderRadius: "10rem",
                     },
                 }} onClick={handleStudentClick} >
                     <Typography sx={{

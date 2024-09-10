@@ -1,6 +1,6 @@
 import { ThemeOptions } from "@mui/material";
 
-export const Theme1: ThemeOptions = {
+export const theme: ThemeOptions = {
   palette: {
     primary: {
       main: '#ffffff', // Blanco

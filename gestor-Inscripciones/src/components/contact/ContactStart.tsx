@@ -72,8 +72,6 @@ export const ContactStart = () => {
                     </svg>
                 </Box>
             </Box>
-            
-            {/* Contenido principal */}
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
