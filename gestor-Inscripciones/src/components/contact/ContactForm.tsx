@@ -205,9 +205,13 @@ export default function ContactForm() {
                     fontSize: "1rem",
                     color: "white",
                     textTransform: "uppercase",
-                    "&:hover": {
-                        backgroundColor: theme.palette.primary.main,
-                    },
+                    transition: "all 0.3s ease-in-out",
+                    '&:hover': {
+                        backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.contrastText}, ${theme.palette.background.paper})`,
+                        boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+                        borderRadius: "1rem",
+                        transform: "scale(1.1)",
+                    }
                 }}>
                     ENVIAR
                 </Button>
