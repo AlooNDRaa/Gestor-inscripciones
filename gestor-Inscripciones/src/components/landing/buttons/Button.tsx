@@ -15,10 +15,17 @@ const StartButton = () => {
             <Button
                 sx={{
                     backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
-                    borderRadius: "10px",
+                    borderRadius: "0.5rem",
                     width: "10rem",
                     height: "4rem",
                     padding: "0.5rem",
+                    transition: "all 0.3s ease-in-out",
+                    '&:hover': {
+                        backgroundImage: `linear-gradient(to right, ${theme.palette.secondary.contrastText}, ${theme.palette.background.paper})`,
+                        boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+                        borderRadius: "1rem",
+                        transform: "scale(1.1)",
+                    }
                 }}
                 onClick={() => navigate("/usuario=?")}
             >

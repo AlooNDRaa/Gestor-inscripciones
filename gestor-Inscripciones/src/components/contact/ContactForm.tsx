@@ -3,6 +3,8 @@ import { Box, Button, TextField, Typography, useTheme } from "@mui/material";
 import { BsEnvelope } from "react-icons/bs";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { LuMessageSquarePlus } from "react-icons/lu";
+import { MdCameraFront } from "react-icons/md";
+
 
 export default function ContactForm() {
     const theme = useTheme();
@@ -24,6 +26,37 @@ export default function ContactForm() {
             color: "black",
             marginBottom: "5rem",
         }}>
+             <TextField
+                label={
+                    <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '1rem' }}>
+                        <MdCameraFront style={{ marginRight: 8 }} />
+                        Nombre completo
+                    </Box>
+                }
+                variant="outlined"
+                sx={{
+                    borderRadius: "1rem",
+                    width: { xs: "80%", md: "60%" },
+                    marginBottom: "0.5rem",
+                    "& .MuiOutlinedInput-root": {
+                        borderRadius: "1rem",
+                        "& fieldset": {
+                            borderColor: theme.palette.background.paper,
+                            borderWidth: "2px",
+                        },
+                        "&:hover fieldset": {
+                            borderColor: "black",
+                        },
+                    },
+                    "& .MuiInputLabel-root": {
+                        color: "black",
+                        fontSize: '1rem',
+                        "&.Mui-focused": {
+                            color: "black",
+                        },
+                    },
+                }}
+            />
             <TextField
                 label={
                     <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '1rem' }}>
@@ -34,8 +67,9 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                     borderRadius: "1rem",
-                    width: "80%",
+                    width: { xs: "80%", md: "60%" },
                     marginBottom: "0.5rem",
+                    marginTop: "1rem",
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
                         "& fieldset": {
@@ -65,7 +99,7 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                     borderRadius: "1rem",
-                    width: "80%",
+                    width: { xs: "80%", md: "60%" },
                     marginTop: "1rem",
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
@@ -106,7 +140,7 @@ export default function ContactForm() {
                 onChange={handleMessageChange}
                 sx={{
                     borderRadius: "1rem",
-                    width: "80%",
+                    width: { xs: "80%", md: "60%" },
                     marginTop: "1rem",
                     "& .MuiOutlinedInput-root": {
                         borderRadius: "1rem",
@@ -136,7 +170,7 @@ export default function ContactForm() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginTop: "1rem",
-                width: "19rem", 
+                width: { xs: "19rem", md: "24rem" },
             }}>
                 <Typography sx={{
                     fontSize: '0.8rem',
@@ -165,13 +199,17 @@ export default function ContactForm() {
                 <Button sx={{
                     backgroundImage: `linear-gradient(to right, ${theme.palette.background.paper}, ${theme.palette.secondary.contrastText})`,
                     borderRadius: "10px",
-                    minWidth: "80%",
+                    minWidth: { xs: "80%", md: "60%" },
                     height: "3.5rem",
                     padding: "0.5rem",
                     fontSize: "1rem",
-                    fontWeight: "bold",
+                    color: "white",
+                    textTransform: "uppercase",
+                    "&:hover": {
+                        backgroundColor: theme.palette.primary.main,
+                    },
                 }}>
-                    Enviar 
+                    ENVIAR
                 </Button>
             </Box>
         </Box>

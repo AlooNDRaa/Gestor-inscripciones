@@ -12,7 +12,7 @@ import FooterDesktop from "./components/generals/desktop/FooterDesktop.tsx";
 import Footer from "./components/generals/Footer.tsx";
 
 function App() {
-  const isDesktop = useMediaQuery({ minWidth: 1024 }); 
+  const isDesktop = useMediaQuery({ minWidth: 1199 }); 
 
   return (
     <Router>

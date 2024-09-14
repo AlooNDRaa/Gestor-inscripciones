@@ -11,7 +11,7 @@ import iconSocket from "../../../assets/images/iconixto/linear/icon.png";
             backgroundColor: theme.palette.background.default,
             boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.1)",
             padding: "0.5rem",
-            // position: "fixed",
+            position: "fixed",
             top: 0,
             left: 0,
             right: 0,
@@ -50,6 +50,9 @@ import iconSocket from "../../../assets/images/iconixto/linear/icon.png";
                     color: theme.palette.text.primary,
                     marginLeft: "0.5rem",
                     marginRight: "0.5rem",
+                    '&:hover': {
+                        borderBottom: "2px solid #000",
+                    }
                 }}>
                     <a href="/">Inicio</a>
                 </Typography>
@@ -60,6 +63,9 @@ import iconSocket from "../../../assets/images/iconixto/linear/icon.png";
                     color: theme.palette.text.primary,
                     marginLeft: "0.5rem",
                     marginRight: "0.5rem",
+                    '&:hover': {
+                        borderBottom: "2px solid #000",
+                    }
                 }}>
                     <a href="/contacto">Contacto</a>
                 </Typography>
@@ -71,6 +77,9 @@ import iconSocket from "../../../assets/images/iconixto/linear/icon.png";
                     marginLeft: "0.5rem",
                     marginRight: "0.5rem",
                     textAlign: "center",
+                    '&:hover': {
+                        borderBottom: "2px solid #000",
+                    }
                 }}>
                     <a href="/sobreNosotros">Sobre <br/> Nosotros</a>
                 </Typography>
@@ -82,6 +91,9 @@ import iconSocket from "../../../assets/images/iconixto/linear/icon.png";
                     marginLeft: "0.5rem",
                     marginRight: "0.5rem",
                     textAlign: "center",
+                    '&:hover': {
+                        borderBottom: "2px solid #000",
+                    }
                 }}>
                     <a href="/usuario=?">Iniciar <br/> admin</a>
                 </Typography>
